@@ -29,25 +29,32 @@ import './Product.css';
 function Product(props){
 
     console.log(props)
-    return(
-    <div>
 
-    <h2> Product Card</h2>
+    if (props.count  > 0){
+        return(
+            <div>
         
-        <div className="card">
-       
-        <img src={props.img }/>
-            <h1>{props.name}</h1>
-            <p className="price"> ${props.price}</p>
-            <p> {props.content}</p>
-            <p><button> Add to cart</button></p>
+            <h2> Product Card</h2>
+                
+                <div className="card">
+               
+                <img src={props.img }/>
+                    <h1>{props.name}</h1>
+                    <p className="price"> ${props.price}</p>
+                    <p> {props.content}</p>
+                    <p><button> Add to cart</button></p>
+        
+                </div>
+        
+        
+            </div>
+        
+            );
 
-        </div>
-
-
-    </div>
-
-    );
+    }else {
+        return null
+    }
+ 
 }
 
 export default Product;
