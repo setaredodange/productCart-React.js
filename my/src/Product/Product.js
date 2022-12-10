@@ -27,6 +27,8 @@ import './Product.css';
 // export default Product;
 
 function Product(props){
+
+    console.log(props)
     return(
     <div>
 
@@ -34,9 +36,9 @@ function Product(props){
         
         <div className="card">
        
-        <img src={props.img}/>
+        <img src={props.img }/>
             <h1>{props.name}</h1>
-            <p className="price"> {props.price}</p>
+            <p className="price"> ${props.price}</p>
             <p> {props.content}</p>
             <p><button> Add to cart</button></p>
 
