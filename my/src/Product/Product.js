@@ -26,22 +26,32 @@ import './Product.css';
 
 // export default Product;
 
-function Product(props){
+function Product({img, name: productName, price, content, count}){
 
-    console.log(props)
+    // console.log(props)
 
-    if (props.count  > 0){
+    // let {img, name, price, count, content}= props
+
+    if (count  > 0){
+
+        let name = 'product card'
         return(
             <div>
         
-            <h2> Product Card</h2>
+            <h2> {name} </h2>
                 
                 <div className="card">
                
-                <img src={props.img }/>
+                {/* <img src={props.img }/>
                     <h1>{props.name}</h1>
                     <p className="price"> ${props.price}</p>
                     <p> {props.content}</p>
+                    <p><button> Add to cart</button></p> */}
+
+                     <img src={img }/>
+                    <h1>{productName}</h1>
+                    <p className="price"> ${price}</p>
+                    <p> {content}</p>
                     <p><button> Add to cart</button></p>
         
                 </div>
