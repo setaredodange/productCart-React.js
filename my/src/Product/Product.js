@@ -26,7 +26,7 @@ import './Product.css';
 
 // export default Product;
 
-export default function Product({img="logo192.png", name: productName, price, content, count}){
+export default function Product({img="logo192.png", name: productName, price, content, count, children}){
 
     // console.log(props)
 
@@ -52,6 +52,8 @@ export default function Product({img="logo192.png", name: productName, price, co
                     <h1>{productName}</h1>
                     <p className="price"> ${price}</p>
                     <p> {content}</p>
+
+                    {children}
                     <p><button> Add to cart</button></p>
         
                 </div>

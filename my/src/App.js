@@ -10,13 +10,21 @@ function App() {
     {id:3, img:"images3.jfif", name:"iPhone12",  price:900, content:"it is the best  for 2020", count:3 }
    
   ]
-  // img:"download4.jpg"
+  
 
   return (
     <div className="container">
-    <Product {...allProducts[0]} />
-    <Product {...allProducts[1]} />
-    <Product {...allProducts[2]} />
+    <Product {...allProducts[0]} >
+      <button> off 50%</button>
+    </Product>
+
+    <Product {...allProducts[1]} >
+    <button>off 40%</button>
+    </Product>
+
+    <Product {...allProducts[2]} >
+    <button> off 30% </button>
+    </Product>
 
     </div>
   );
