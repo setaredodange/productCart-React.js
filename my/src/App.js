@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Product from './Product/Product'
+import Modal from './Modal/Modal'
 
 function App() {
 
@@ -25,6 +26,17 @@ function App() {
     <Product {...allProducts[2]} >
     <button> off 30% </button>
     </Product>
+
+    <Modal>
+
+    <p> Are you sure want to delete this?</p>
+                <ul className="cd-buttons">
+                
+                <li> <a href="#0"> Yes </a></li>
+                <li><a href="#0"> No </a></li>
+
+                </ul>    
+    </Modal>
 
     </div>
   );
